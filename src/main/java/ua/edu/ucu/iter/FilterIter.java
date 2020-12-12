@@ -10,7 +10,9 @@ public class FilterIter implements Iterator<Integer> {
     private IntPredicate pred;
     private Integer current;
 
-    public FilterIter(Iterator<Integer> iterator, IntPredicate predicate) {
+    public FilterIter(
+            Iterator<Integer> iterator,
+            IntPredicate predicate) {
         iter = iterator;
         pred = predicate;
         current =  getNext();

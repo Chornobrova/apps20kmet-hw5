@@ -12,7 +12,9 @@ public class FlatMapIter implements Iterator<Integer> {
     private int index;
     private Integer current;
 
-    public FlatMapIter(Iterator<Integer> iterator, IntToIntStreamFunction func) {
+    public FlatMapIter(
+            Iterator<Integer> iterator,
+            IntToIntStreamFunction func) {
         iter = iterator;
         streamFunc = func;
         index = 0;

@@ -9,7 +9,9 @@ public class MapIter implements Iterator<Integer> {
     private Iterator<Integer> iter;
     private IntUnaryOperator map;
 
-    public MapIter(Iterator<Integer> iterator, IntUnaryOperator oper) {
+    public MapIter(
+            Iterator<Integer> iterator,
+            IntUnaryOperator oper) {
         iter = iterator;
         map = oper;
     }

@@ -1,6 +1,10 @@
 package ua.edu.ucu.stream;
 
-import ua.edu.ucu.function.*;
+import ua.edu.ucu.function.IntBinaryOperator;
+import ua.edu.ucu.function.IntConsumer;
+import ua.edu.ucu.function.IntPredicate;
+import ua.edu.ucu.function.IntToIntStreamFunction;
+import ua.edu.ucu.function.IntUnaryOperator;
 import ua.edu.ucu.iter.FilterIter;
 import ua.edu.ucu.iter.FlatMapIter;
 import ua.edu.ucu.iter.MapIter;
@@ -36,7 +40,7 @@ public class AsIntStream implements IntStream {
             res[0] += x;
             res[1] += 1;
         });
-        return (double)res[0]/res[1];
+        return (double) res[0]/res[1];
     }
 
 
@@ -95,7 +99,7 @@ public class AsIntStream implements IntStream {
         LinkedList<Integer> list = new LinkedList<Integer>();
         forEach(x -> list.add(x));
         int[] res = new int[list.size()];
-        for (int i = 0; i < list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             res[i] = list.get(i);
         }
         return res;
